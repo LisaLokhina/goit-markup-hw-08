@@ -1,0 +1,124 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms, visibility 250ms;
+
+  &__modal-window {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    width: 528px;
+    padding: 40px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  }
+  .is-hidden &__modal-window {
+    transform: translateX(-50%) translateY(-50%) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background-color: var(--white);
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    color: var(--black);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+  &:hover &__icon,
+  &:focus &__icon {
+    color: var(--brand-color);
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group {
+  position: relative;
+  margin-bottom: 10px;
+
+  &__label {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  &__field {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    font-size: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--textarea {
+      padding: 12px 16px;
+      min-height: 120px;
+      max-height: 120px;
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+  &__icon {
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__field:hover + &__icon,
+  &__field:focus + &__icon,
+  &__field:active + &__icon {
+    fill: var(--brand-color);
+  }
+
+  &__field:hover,
+  &__field:focus,
+  &__field:active {
+    border-color: var(--brand-color);
+  }
+}
+
+.consent-block {
+  align-self: center;
+
+  &__checkbox {
+    display: none;
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__checkbox:checked + &__label &__checkbox-icon--default,
+  &__checkbox:not(:checked) + &__label &__checkbox-icon--checked {
+    display: none;
+  }
+  &__text {
+    margin-left: 8px;
+  }
+  &__anchor {
+    color: var(--brand-color);
+    text-decoration: underline;
+  }
+}

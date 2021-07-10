@@ -1,0 +1,49 @@
+.our-clients {
+  @extend .section;
+
+  &__container {
+    @extend .container;
+    flex-direction: column;
+  }
+  &__secondary-header {
+    @extend .secondary-header;
+  }
+  &__list {
+    @extend .list;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.client-block {
+  width: 170px;
+  height: 92px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__anchor {
+    @extend .anchor;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+      color: var(--brand-color);
+      border: 1px solid var(--brand-color);
+
+      .client-block__logo {
+        fill: var(--brand-color);
+      }
+    }
+  }
+  &__logo {
+    fill: var(--icon-grey);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
