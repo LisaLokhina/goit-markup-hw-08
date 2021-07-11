@@ -225,7 +225,7 @@ img {
 
 .modal-btn {
   margin-top: 30px;
-  padding: 10px 32px;
+  padding: 10px 55px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1034,12 +1034,13 @@ img {
   position: absolute;
   display: block;
   top: 50%;
-  left: 50%;
+  left: calc(50% - 10px);
   transform: translateX(-50%) translateY(-50%) scale(1);
-  width: 528px;
+  width: calc(100% - 50px);
   padding: 40px;
   border-radius: 4px;
   background-color: white;
+  font-size: 12px;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
 }
 
@@ -1149,5 +1150,12 @@ img {
 .consent-block__anchor {
   color: var(--brand-color);
   text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop__modal-window {
+    width: 528px;
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

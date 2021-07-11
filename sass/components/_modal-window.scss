@@ -12,12 +12,13 @@
     position: absolute;
     display: block;
     top: 50%;
-    left: 50%;
+    left: calc(50% - 10px);
     transform: translateX(-50%) translateY(-50%) scale(1);
-    width: 528px;
+    width: calc(100% - 50px);
     padding: 40px;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 1);
+    font-size: 12px;
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   }
   .is-hidden &__modal-window {
@@ -120,5 +121,14 @@
   &__anchor {
     color: var(--brand-color);
     text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .backdrop {
+    &__modal-window {
+      width: 528px;
+      font-size: 14px;
+    }
   }
 }
