@@ -493,6 +493,14 @@ img {
   margin: 0 auto;
 }
 
+.hero__full-width {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 46vw;
+}
+
 .hero__main-header {
   color: var(--white);
   font-weight: 900;
@@ -501,7 +509,7 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  max-width: 90%;
+  max-width: 400px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -510,17 +518,13 @@ img {
     height: initial;
     max-width: 1600px;
   }
-  .hero__full-width {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 600px;
-  }
   .hero__main-header {
     font-size: 44px;
     line-height: 1.36;
     max-width: 696px;
+  }
+  .hero__full-width {
+    min-height: 600px;
   }
 }
 
