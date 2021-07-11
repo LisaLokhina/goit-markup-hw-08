@@ -18,6 +18,10 @@
     top: 10px;
     right: 15px;
   }
+  &__menu-button:hover &__menu-button-image,
+  &__menu-button:focus &__menu-button-image {
+    fill: var(--brand-color);
+  }
 }
 .navigation {
   display: none;
@@ -72,6 +76,7 @@
   &__social-networks-list-item {
     display: inline-block;
     margin-top: 64px;
+    font-weight: 500;
 
     &:not(:last-child)::after {
       content: '｜';

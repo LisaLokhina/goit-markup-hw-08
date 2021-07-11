@@ -314,6 +314,11 @@ img {
   right: 15px;
 }
 
+.page-header__menu-button:hover .page-header__menu-button-image,
+.page-header__menu-button:focus .page-header__menu-button-image {
+  fill: var(--brand-color);
+}
+
 .navigation {
   display: none;
 }
@@ -367,6 +372,7 @@ img {
 .navigation__social-networks-list-item {
   display: inline-block;
   margin-top: 64px;
+  font-weight: 500;
 }
 
 .navigation__social-networks-list-item:not(:last-child)::after {
