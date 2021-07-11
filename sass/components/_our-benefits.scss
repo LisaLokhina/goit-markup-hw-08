@@ -1,6 +1,5 @@
 .our-benefits {
   @extend .section;
-  padding-bottom: 0;
 
   &__container {
     @extend .container;
@@ -55,6 +54,8 @@
 }
 @media screen and (min-width: $desktop) {
   .our-benefits {
+    padding-bottom: 0;
+
     &__list {
       flex-wrap: nowrap;
     }

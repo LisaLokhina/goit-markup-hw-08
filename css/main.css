@@ -534,10 +534,6 @@ img {
   }
 }
 
-.our-benefits {
-  padding-bottom: 0;
-}
-
 .benefit-item:not(:last-child) {
   padding-bottom: 30px;
 }
@@ -573,6 +569,9 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .our-benefits {
+    padding-bottom: 0;
+  }
   .our-benefits__list {
     flex-wrap: nowrap;
   }
@@ -588,6 +587,10 @@ img {
   .benefit-item__icon-container {
     width: 270px;
   }
+}
+
+.our-expertise {
+  display: none;
 }
 
 .our-expertise__container {
@@ -623,6 +626,12 @@ img {
   line-height: 1.14;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .our-expertise {
+    display: block;
+  }
 }
 
 .our-team {
