@@ -33,12 +33,46 @@
   }
 }
 
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/mobile/hero-image@2x.jpg');
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/tablet/hero-image.jpg');
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/tablet/hero-image@2x.jpg');
+    }
+  }
+}
+
 @media screen and (min-width: $desktop) {
   .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/desktop/hero-image.jpg');
     width: initial;
     height: initial;
     max-width: 1600px;
-
     &__main-header {
       font-size: 44px;
       line-height: 1.36;
@@ -46,6 +80,16 @@
     }
     &__full-width {
       min-height: 600px;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/desktop/hero-image@2x.jpg');
     }
   }
 }
