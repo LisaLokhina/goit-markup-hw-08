@@ -1,65 +1,98 @@
 .our-team {
-    @extend .section;
-    background-color: var(--light-grey);
+  @extend .section;
+  background-color: var(--light-grey);
 
-    &__container {
-        @extend .container;
-        flex-direction: column;
-        align-items: center;
-    }
-    &__secondary-header {
-        @extend .secondary-header;
-    }
-    &__list {
-        @extend .list;
-        display: flex;
-    }
+  &__container {
+    @extend .container;
+  }
+  &__secondary-header {
+    @extend .secondary-header;
+  }
+  &__list {
+    @extend .list;
+  }
 }
-
 .our-team-card {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__image {
+    width: 100%;
+  }
 }
 
 .person-caption {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0;
-    background-color: var(--white);
-    border-radius: 0px 0px 4px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  background-color: var(--white);
+  border-radius: 0px 0px 4px 4px;
 
-    &__name {
-        @extend .caption;
-        font-size: 16px;
-        line-height: 1.19;
-    }
-    &__position {
-        margin-bottom: 16px;
-    }
+  &__name {
+    @extend .caption;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+  &__position {
+    margin-bottom: 16px;
+  }
 }
 .social-media {
-    @extend .list;
-    display: flex;
+  @extend .list;
+  display: flex;
 
-    &__item:not(:last-child) {
-        margin-right: 10px;
-    }
-    &__icon {
-        @extend .icon;
-        @extend .social-icon;
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__icon {
+    @extend .icon;
+    @extend .social-icon;
 
-        &:hover,
-        &:focus {
-            background-color: var(--brand-color);
-            color: var(--white);
-        }
+    &:hover,
+    &:focus {
+      background-color: var(--brand-color);
+      color: var(--white);
     }
-    &__logo {
-        fill: currentColor;
+  }
+  &__logo {
+    fill: currentColor;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .our-team {
+    &__container {
+      flex-direction: column;
+      align-items: center;
     }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .our-team-card {
+    width: calc(50% - 15px);
+    &:nth-child(n + 3) {
+      margin-bottom: 0;
+    }
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+}
+@media screen and (min-width: $desktop) {
+  .our-team-card {
+    width: initial;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
