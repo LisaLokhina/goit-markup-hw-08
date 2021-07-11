@@ -5,6 +5,9 @@
   line-height: 1.17;
   color: var(--brand-color);
 
+  .is-open & {
+    display: none;
+  }
   &__highlight {
     color: var(--black);
 

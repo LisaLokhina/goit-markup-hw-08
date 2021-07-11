@@ -10,9 +10,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header js-menu-container">
       <div class="page-header__header">
         <a href="index.html" class="logo"
           >Web<span class="logo__highlight">Studio</span></a
@@ -38,40 +45,87 @@
               <a href="" class="navigation__site-nav-anchor">Контакты</a>
             </li>
           </ul>
-          <ul class="navigation__auth-nav">
-            <li class="navigation__auth-nav-item">
-              <a
-                href="mailto:info@devstudio.com"
-                class="navigation__auth-nav-anchor"
-              >
-                <svg
-                  class="
-                    navigation__button-icon navigation__button-icon--horizontal
-                  "
-                  width="14"
-                  height="10"
+          <div>
+            <ul class="navigation__auth-nav">
+              <li class="navigation__auth-nav-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="navigation__auth-nav-anchor"
                 >
-                  <use href="./images/icons.svg#icon-envelope" />
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="navigation__auth-nav-item">
-              <a href="tel:+380961111111" class="navigation__auth-nav-anchor">
-                <svg
-                  class="
-                    navigation__button-icon navigation__button-icon--vertical
-                  "
-                  width="10"
-                  height="14"
+                  <svg
+                    class="
+                      navigation__button-icon
+                      navigation__button-icon--horizontal
+                    "
+                    width="14"
+                    height="10"
+                  >
+                    <use href="./images/icons.svg#icon-envelope" />
+                  </svg>
+                  info@devstudio.com</a
                 >
-                  <use href="./images/icons.svg#icon-smartphone" />
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
+              </li>
+              <li class="navigation__auth-nav-item">
+                <a
+                  href="tel:+380961111111"
+                  class="
+                    navigation__auth-nav-anchor
+                    navigation__auth-nav-anchor--phone
+                  "
+                >
+                  <svg
+                    class="
+                      navigation__button-icon navigation__button-icon--vertical
+                    "
+                    width="10"
+                    height="14"
+                  >
+                    <use href="./images/icons.svg#icon-smartphone" />
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="navigation__social-networks-list">
+              <li class="navigation__social-networks-list-item">
+                <a href="" class="navigation__social-networks-list-anchor"
+                  >Instagram</a
+                >
+              </li>
+              <li class="navigation__social-networks-list-item">
+                <a href="" class="navigation__social-networks-list-anchor"
+                  >Twitter</a
+                >
+              </li>
+              <li class="navigation__social-networks-list-item">
+                <a href="" class="navigation__social-networks-list-anchor"
+                  >Facebook</a
+                >
+              </li>
+              <li class="navigation__social-networks-list-item">
+                <a href="" class="navigation__social-networks-list-anchor"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
+        <button type="button" class="page-header__menu-button">
+          <svg
+            width="40"
+            height="40"
+            class="page-header__menu-button-image js-open-menu"
+          >
+            <use href="./images/icons.svg#icon-burger-menu"></use>
+          </svg>
+          <svg
+            width="40"
+            height="40"
+            class="page-header__menu-button-image js-close-menu"
+          >
+            <use href="./images/icons.svg#icon-close-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
